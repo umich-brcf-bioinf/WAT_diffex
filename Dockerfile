@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.7.12-alpine
+FROM continuumio/miniconda3:4.7.12
 
 ARG env_name
 
@@ -7,10 +7,7 @@ COPY ${env_name}.yaml /tmp/
 
 ENV PATH /opt/conda/bin:$PATH
 
-#bioconductor post-link scripts need bash
-RUN conda install -c conda-forge bash && \
-    conda env create -f /tmp/${env_name}.yaml && \
-    conda clean --all -y
+RUN conda env create -f /tmp/${env_name}.yaml && conda clean --all -y
 
 ENV PATH /opt/conda/envs/${env_name}/bin:$PATH
 
