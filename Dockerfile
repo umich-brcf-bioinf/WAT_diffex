@@ -7,7 +7,10 @@ COPY ${env_name}.yaml /tmp/
 
 ENV PATH /opt/conda/bin:$PATH
 
-RUN conda env create -f /tmp/${env_name}.yaml && conda clean --all -y
+#bioconductor post-link scripts need bash
+RUN conda install -c conda-forge bash && \
+    conda env create -f /tmp/${env_name}.yaml && \
+    conda clean --all -y
 
 ENV PATH /opt/conda/envs/${env_name}/bin:$PATH
 
