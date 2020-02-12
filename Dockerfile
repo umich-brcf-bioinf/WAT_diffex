@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.5.12
+FROM continuumio/miniconda3:4.7.12-alpine
 
 ARG env_name
 
