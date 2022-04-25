@@ -11,10 +11,9 @@ RUN mamba env create -f /tmp/${env_name}.yaml && conda clean --all -y
 
 ENV PATH /opt/conda/envs/${env_name}/bin:$PATH
 
-RUN apt-get --allow-releaseinfo-change update && \
-    apt-get -y install fonts-noto
 
-RUN fc-cache -fv
+RUN apt-get --allow-releaseinfo-change update && \
+    apt-get install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-generic-extra texlive-plain-generic
 
 # Add RStudio to environment, to simplify the experience of interactive / manual interventions
 RUN apt-get update && \
