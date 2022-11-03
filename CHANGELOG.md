@@ -1,3 +1,8 @@
+0.5.0 (10/27/2022)
+------------------
+- Added pyyaml and r-reticulate
+  - Useful in diffex defang refactor
+
 0.4.1 (09/23/2022)
 ------------------
 - Fixed issues loading libraries within RStudio
