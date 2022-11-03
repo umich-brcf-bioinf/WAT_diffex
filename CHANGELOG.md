@@ -1,4 +1,4 @@
-0.5.0 (10/27/2022)
+0.5.0 (11/03/2022)
 ------------------
 - Added pyyaml and r-reticulate
   - Useful in diffex defang refactor
