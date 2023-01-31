@@ -25,3 +25,4 @@ dependencies:
   - r-yaml=2.3.5
   - r-tinytex=0.39
   - r-ashr=2.2_54
+  - r-randomcolor=1.1.0

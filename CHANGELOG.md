@@ -1,3 +1,8 @@
+0.6.0 (01/31/2023)
+------------------
+- Updated base image 4.7.12 -> 4.12.0
+- Added r-randomcolor
+
 0.5.0 (11/03/2022)
 ------------------
 - Added pyyaml and r-reticulate
